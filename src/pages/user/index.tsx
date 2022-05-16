@@ -104,50 +104,50 @@ export default function Profile(): JSX.Element {
               className="w-full flex flex-col gap-y-4"
               onSubmit={handleSubmit(onSubmit)}
             >
-                  <div className="flex flex-col gap-y-12 items-center gap-x-4 sm:flex-row">
-                    <Input
-                      label="Email"
-                      icon={<MdEmail className="text-2xl text-gray-700" />}
-                      register={register('email')}
-                      error={errors.email}
-                    />
-                    <Input
-                      label="Nome Completo"
-                      icon={<MdPerson className="text-2xl text-gray-700" />}
-                      register={register('name')}
-                      error={errors.name}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-y-8 items-center gap-x-4 sm:flex-row">
-                    <Input
-                      label="Celular"
-                      icon={<MdPhone className="text-2xl text-gray-700" />}
-                      register={{...register('phone'), maxLength: 15, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue('phone', phoneMask(e.currentTarget.value), { shouldValidate: true })}}
-                      error={errors.phone}
-                    />
-                    <Input
-                      label="CPF"
-                      icon={<MdOutlineFileCopy className="text-2xl text-gray-700" />}
-                      register={{...register('cpf'), onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue('cpf', cpfMask(e.currentTarget.value), { shouldValidate: true })}}
-                      error={errors.cpf}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-y-8 items-center gap-x-4 sm:flex-row">
-                    <Input
-                      type="password"
-                      label="Senha Atual"
-                      icon={<MdPassword className="text-2xl text-gray-700" />}
-                      register={register('currentPassword')}
-                      error={errors.currentPassword}
-                    />
-                    <Input
-                      type="password"
-                      label="Nova Senha"
-                      icon={<MdPassword className="text-2xl text-gray-700" />}
-                      register={register('password')}
-                      error={errors.password}
-                    />
-                  </div>
+              <div className="flex flex-col gap-y-12 items-center gap-x-4 sm:flex-row">
+                <Input
+                  label="Email"
+                  icon={<MdEmail className="text-2xl text-gray-700" />}
+                  register={register('email')}
+                  error={errors.email}
+                />
+                <Input
+                  label="Nome Completo"
+                  icon={<MdPerson className="text-2xl text-gray-700" />}
+                  register={register('name')}
+                  error={errors.name}
+                />
+              </div>
+              <div className="flex flex-col gap-y-8 items-center gap-x-4 sm:flex-row">
+                <Input
+                  label="Celular"
+                  icon={<MdPhone className="text-2xl text-gray-700" />}
+                  register={{...register('phone'), maxLength: 15, onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue('phone', phoneMask(e.currentTarget.value), { shouldValidate: true })}}
+                  error={errors.phone}
+                />
+                <Input
+                  label="CPF"
+                  icon={<MdOutlineFileCopy className="text-2xl text-gray-700" />}
+                  register={{...register('cpf'), onChange: (e: React.ChangeEvent<HTMLInputElement>) => setValue('cpf', cpfMask(e.currentTarget.value), { shouldValidate: true })}}
+                  error={errors.cpf}
+                />
+              </div>
+              <div className="flex flex-col gap-y-8 items-center gap-x-4 sm:flex-row">
+                <Input
+                  type="password"
+                  label="Senha Atual"
+                  icon={<MdPassword className="text-2xl text-gray-700" />}
+                  register={register('currentPassword')}
+                  error={errors.currentPassword}
+                />
+                <Input
+                  type="password"
+                  label="Nova Senha"
+                  icon={<MdPassword className="text-2xl text-gray-700" />}
+                  register={register('password')}
+                  error={errors.password}
+                />
+              </div>
               <div className="flex justify-end">
                 <button className="bg-primary text-white px-10 py-2 rounded-full">
                   Editar
